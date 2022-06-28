@@ -1,0 +1,112 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.header {
+}
+
+.books-container {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 10px 350px;
+}
+
+.book-card {
+    background-color: rgb(173, 173, 173);
+    display: grid;
+    justify-content: center;
+}
+
+.book-card p {
+    border-bottom: 2px black solid;
+}
+
+.form-container-hidden {
+    display: none;
+}
+.form-container-visible {
+    position: fixed;
+    z-index: 1;
+    left: 45%;
+    top: 35%;
+    transition: 0.2s ease-in-out;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 350px;
+    gap: 35px;
+    
+    border: 1px black solid;
+    padding: 15px;
+    margin: 0;
+    
+}
+
+.blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+    background: rgba(0,0,0,.5);
+}
+
+.form-content {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    
+}
+
+.change-status {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    gap: 20px;
+}
+
+#deleteButton {
+    background-color: rgb(95, 128, 128);
+}
+
+.book-button-container {
+    align-self: center;
+    padding: 50px;
+}
+
+#addBookButton {
+    width: 200px;
+}
+
+.change-status-off {
+    background-color: rgb(153, 52, 21);
+}
+
+.change-status-on {
+    background-color: rgb(20, 218, 63);
+}
+
