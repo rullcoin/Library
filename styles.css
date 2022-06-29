@@ -31,7 +31,9 @@ body {
     gap: 100px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
-    padding: 10px 350px;
+    justify-content: center;
+    margin-left: 350px;
+    margin-right: 350px;
 }
 
 .book-card {
@@ -41,7 +43,6 @@ body {
     border-radius: 25px;
     box-shadow: 2px 2px var(--grey);
     overflow: hidden;
-    width: 350px;
 }
 
 .book-card p {
