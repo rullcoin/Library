@@ -78,13 +78,6 @@ function deleteItem(e) {
     myLibrary.splice(idToDelete, 1)
 
     e.target.parentNode.parentNode.remove()
-    console.log(myLibrary)
-
-    //for each button -> re-attribute an id
-//     const btns = document.querySelectorAll("deleteButton")
-//     Array.from(btns).forEach(function() {
-//         return console.log("hi");
-//     })
 }
 
 function addBookToLibrary(bookTitle, bookAuthor, bookPages, bookStatus) {
