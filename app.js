@@ -76,17 +76,13 @@ Book.prototype.addToDiv = function() {
 function deleteItem(e) {
     let idToDelete = e.target.getAttribute('data-id');
     myLibrary.splice(idToDelete, 1)
-
     e.target.parentNode.parentNode.remove()
 }
 
 function addBookToLibrary(bookTitle, bookAuthor, bookPages, bookStatus) {
     userBook = new Book(bookTitle, bookAuthor, bookPages, bookStatus)
     myLibrary.push(userBook)
-
-    console.log(myLibrary);
     displayBook(userBook)
-
 }
 
 //Needed function to display book on html when adding new div
@@ -114,14 +110,8 @@ submitButton.addEventListener("click", function(e) {
     let pages = document.getElementById("pages").value
     let read = document.getElementById("read").checked    
 
-    if (read) {
-
-    }
-
     form.reset();
     formDiv.className = "form-container-hidden"
     addBookToLibrary(title, author, pages, read)
 
 })
-
-console.log(myLibrary);
