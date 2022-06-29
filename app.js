@@ -32,7 +32,7 @@ Book.prototype.addToDiv = function() {
     let childDiv = document.createElement("div");
     childDiv.classList.add("book-card")
 
-    let titleParagraph = document.createElement("p");
+    let titleParagraph = document.createElement("h1");
     let authorParagraph = document.createElement("p");
     let pagesParagraph = document.createElement("p");
 
@@ -55,14 +55,14 @@ Book.prototype.addToDiv = function() {
         statusButton.innerHTML = "Not read"
     }
 
-    buttonContainer.append(deleteButton, statusButton)
+    buttonContainer.append(statusButton, deleteButton)
 
     // Needed to add id to button
     let id = myLibrary.length - 1
     deleteButton.setAttribute("data-id", id)
 
-    titleParagraph.textContent = `Title: ${this.title}`
-    authorParagraph.textContent = `Author: ${this.author}`
+    titleParagraph.textContent = `${this.title}`
+    authorParagraph.textContent = `By: ${this.author}`
     pagesParagraph.textContent = `Pages: ${this.pages}`
 
     childDiv.append(titleParagraph, authorParagraph, pagesParagraph, buttonContainer)

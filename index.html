@@ -5,67 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
-
-        <div class="header"> 
-            <div class="logo">
-
-            </div>
-            <div class="title">
-                <h1>
-                    My Library
-                </h1>
-            </div>
+      <div class="header">
+        <div class="logo"></div>
+        <div class="title">
+          <h1>My Library</h1>
         </div>
+      </div>
 
-        <div class="book-button-container">
-            <button id="addBookButton">Add book</button>
-        </div>
-        
+      <div class="book-button-container">
+        <button id="addBookButton">+ Add book</button>
+      </div>
 
-    <div id="form-container" class="form-container-hidden">
+      <div id="form-container" class="form-container-hidden">
         <div class="blocker" onclick="hide()"></div>
 
         <div class="form-content">
-      <form class="form">
-        <label for="title"></label>
-        <input
-          type="text"
-          minlength="2"
-          id="title"
-          name="title"
-          placeholder="Title"
-          required
-        />
+          <form class="form" action="" method="">
+            <label for="title"></label>
+            <input
+              type="text"
+              minlength="2"
+              id="title"
+              name="title"
+              placeholder="Title"
+              required
+            />
 
-        <input
-          type="text"
-          id="author"
-          name="author"
-          placeholder="Author"
-          required
-        />
+            <input
+              type="text"
+              id="author"
+              name="author"
+              placeholder="Author"
+              required
+            />
 
-        <input
-          type="number"
-          id="pages"
-          name="pages"
-          placeholder="Number of pages"
-          required
-        />
-        
-        <div class="read-container">
-            <label for="checkbox">Have you read the book?</label>
-            <input type="checkbox" id="read" name="checkbox" />
+            <input
+              type="number"
+              id="pages"
+              name="pages"
+              placeholder="Number of pages"
+              required
+            />
+
+            <div class="read-container">
+              <label for="checkbox">Have you read the book?</label>
+              <input type="checkbox" id="read" name="checkbox" />
+            </div>
+
+            <button id="submit-button" type="submit">Submit</button>
+          </form>
         </div>
-
-        <button id="submit-button" type="submit">Submit</button>
-      </form>
-    </div>
-</div>
+      </div>
 
       <div id="books-container" class="books-container"></div>
     </div>
